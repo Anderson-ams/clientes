@@ -1,4 +1,4 @@
-package com.andersondev.clientes;
+package com.andersondev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
