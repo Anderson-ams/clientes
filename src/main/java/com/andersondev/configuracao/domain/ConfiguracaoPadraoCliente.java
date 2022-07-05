@@ -1,4 +1,4 @@
-package com.andersondev.domain;
+package com.andersondev.configuracao.domain;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;
