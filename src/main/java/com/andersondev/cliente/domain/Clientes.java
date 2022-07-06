@@ -5,7 +5,6 @@ import java.util.UUID;
 import javax.validation.constraints.Email;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AccessLevel;
@@ -19,19 +18,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 
-@Document(collation = "Cliente")
+@Document(collation = "Clientes")
 
-public class Cliente {
+public class Clientes {
 	
 	@Id
 	private UUID idCliente;
-	private String cpf;
+	private String nome;
 	@Email
-	@Indexed
 	private String email;
 	@Builder.Default
 	private StatusCliente status = StatusCliente.CLIENTE_POTENCIAL;
-	
-	
 	
 }

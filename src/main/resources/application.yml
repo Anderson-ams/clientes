@@ -9,4 +9,6 @@ spring:
       uri: ${MONGO_DB_URI:mongodb+srv://AndersonM:swdevcqi@cluster0.squbxys.mongodb.net/clientes?retryWrites=true&w=majority}
       auto-index-creation: true
       
-       
+springdoc:
+  swagger-ui:
+    path: /swagger

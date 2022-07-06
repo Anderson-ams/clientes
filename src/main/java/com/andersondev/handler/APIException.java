@@ -12,6 +12,10 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class APIException extends RuntimeException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private HttpStatus statusException;
 	private ErroApiResponse bodyException;
 
