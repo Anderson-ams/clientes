@@ -9,14 +9,16 @@ import com.andersondev.cliente.controller.ClienteCriadoResponse;
 import com.andersondev.cliente.controller.ClienteRequeste;
 import com.andersondev.cliente.domain.Clientes;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Service
 @Validated
 @Log4j2
+@RequiredArgsConstructor
 public class ClienteService implements ClienteApplicationService {
 
-	private UsuarioRepository usuarioRepository;
+	private final ClienteRepository usuarioRepository;
 
 	@Override
 	public ClienteCriadoResponse criaNovoCliente(@Valid ClienteRequeste clienteNovo) {
