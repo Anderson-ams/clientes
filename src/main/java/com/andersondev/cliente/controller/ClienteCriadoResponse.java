@@ -1,4 +1,4 @@
-package com.andersondev.controller;
+package com.andersondev.cliente.controller;
 
 import java.util.UUID;
 
@@ -16,11 +16,11 @@ public class ClienteCriadoResponse {
 	private final StatusCliente status;
 	
 	
-	public ClienteCriadoResponse(Clientes cliente) {
-		this.idCliente = cliente.getIdCliente();
-		this.email = cliente.getEmail();
-		this.nome = cliente.getNome();
-		this.status = cliente.getStatus();
+	public ClienteCriadoResponse(Clientes clientes) {
+		this.idCliente = clientes.getIdCliente();
+		this.email = clientes.getEmail();
+		this.nome = clientes.getNome();
+		this.status = clientes.getStatus();
 	}
 	
 }

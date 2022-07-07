@@ -1,4 +1,4 @@
-package com.andersondev.controller;
+package com.andersondev.cliente.controller;
 
 import javax.validation.Valid;
 

@@ -7,6 +7,9 @@ import javax.validation.constraints.Email;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.andersondev.cliente.controller.ClienteRequeste;
+import com.andersondev.configuracao.domain.ConfiguracaoPadraoCliente;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +22,6 @@ import lombok.NoArgsConstructor;
 @Getter
 
 @Document(collation = "Clientes")
-
 public class Clientes {
 	
 	@Id
@@ -30,4 +32,9 @@ public class Clientes {
 	@Builder.Default
 	private StatusCliente status = StatusCliente.CLIENTE_POTENCIAL;
 	
+	public Clientes(ClienteRequeste clienteNovo) {
+		this.nome = clienteNovo.getNome();
+		this.email = clienteNovo.getEmail();
+		this.status = StatusCliente.CLIENTE_POTENCIAL;
+	}
 }
